@@ -104,7 +104,7 @@ to view the help menu with a complete list of options.
 
 This is the menu that you should see:
 
-![Help Menu Image](imgs/help_menu.png)
+![Help Menu Image](src/imgs/help_menu.png)
 
 There are 3 categories of arguments:
 
@@ -127,7 +127,7 @@ _Details of the input file:_
 - If the location names are unavailable (columns are not named in the csv/tsv), then we name the columns with loc1, loc2, etc. for the output and the charts. If location names are unavailable, use the flag '-noheader'
 
 Example csv:  
-<img src="imgs/examplecsv.png" width=50% height=50%>
+<img src="src/imgs/examplecsv.png" width=50% height=50%>
 
 ##### -outfile
 
@@ -141,13 +141,13 @@ checkContaminants -infile inputdatafile.csv -outfile results.txt
 
 A text output looks as follows (different verbosities are detailed later):
 
-<img src="imgs/terminaloutput.png" width=50% height=50%>
+<img src="src/imgs/terminaloutput.png" width=50% height=50%>
 
 A csv output looks as follows:
 
 <!-- ![CSV Output Example](imgs/csvoutput.png) -->
 
-<img src="imgs/csvoutput.png">
+<img src="src/imgs/csvoutput.png">
 
 #### Configuration Setup
 
@@ -215,15 +215,15 @@ There are 3 verbosity modes.
 
 The first is the least verbose, it is the default (with no flags). It prints the number of species above the threshold value. It lists the contaminants (species with scores above the threshold).
 
-<img src="imgs/terminaloutput.png" height=50% width=50%>
+<img src="src/imgs/terminaloutput.png" height=50% width=50%>
 
 The second is with ```-v``` as flag. It prints Species name (score; number of positive location). It also outputs a summary table with scores, number of species of that score, and the number of locations over which they are spread. Verbosity ```-v``` outputs also provide the number of species that were not found in the curated species in the datfile as well as the total number of locations processed.
 
-<img src="imgs/outv.png" height=50% width=50%>
+<img src="src/imgs/outv.png" height=50% width=50%>
 
 The verbosity ```-vv``` output is mostly the same as the verbosity ```-v``` output. Except that the names of the species their scores and # of locations are tabulated. There is also a column where the location names are listed.
 
-<img src="imgs/outvv.png" height=70% width=70%>
+<img src="src/imgs/outvv.png" height=70% width=70%>
 
 ##### -pdf
 
@@ -231,31 +231,31 @@ By including this flag, a pdf with 3 charts is generated. Also, a pdf with relev
 
 The pdf looks as follows:
 
-<img src="imgs/outpdf.png" height=80% width=80%>
+<img src="src/imgs/outpdf.png" height=80% width=80%>
 
 The venn diagrams file looks like this:
 
-<img src="imgs/outvenn.png" height=80% width=80%>
+<img src="src/imgs/outvenn.png" height=80% width=80%>
 
 The second chart of the pdf may switch to a log scale y-axis when reasonable. For example:
 
 _Linear Scale Chart Example:_
 
-<img src="imgs/outlin2.png" height=50% width=50%>
+<img src="src/imgs/outlin2.png" height=50% width=50%>
 
 _Log Scale Chart Example:_
 
-<img src="imgs/outlog2.png" height=50% width=50%>
+<img src="src/imgs/outlog2.png" height=50% width=50%>
 
 The scale of the x-axis of the third chart is controlled by the ```-logchart``` flag. If the flag is included, the chart may have a log scale x-axis if the ratio of the biggest bar to the smallest bar is greater than 100. The two diagrams look as follows:
 
 _Linear Scale Chart Example:_
 
-<img src="imgs/outlin.png" height=50% width=50%>
+<img src="src/imgs/outlin.png" height=50% width=50%>
 
 _Log Scale Chart Example:_
 
-<img src="imgs/outlog.png" height=50% width=50%>
+<img src="src/imgs/outlog.png" height=50% width=50%>
 
 ### II By Importing as a Module
 
@@ -291,6 +291,8 @@ Dr. Ashish Mahabal - [aam@astro.caltech.edu](mailto:aam@astro.caltech.edu)
 Dr. Nitin Singh - [nitin.k.singh@jpl.nasa.gov](mailto:nitin.k.singh@jpl.nasa.gov)
 
 Nishka Arora - [naarora@caltech.edu](mailto:naarora@caltech.edu)
+
+Dr. Moogega Cooper - [moogega.cooper@jpl.nasa.gov]
 
 Pypi Link:
 
