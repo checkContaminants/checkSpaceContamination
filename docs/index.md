@@ -140,13 +140,13 @@ checkContaminants -infile inputdatafile.csv -outfile results.txt
 
 A text output looks as follows (different verbosities are detailed later):
 
-![](checkSpaceContaminations/assets/images/terminaloutput.png)
+![](/checkSpaceContaminations/assets/images/terminaloutput.png)
 
 A csv output looks as follows:
 
 <!-- ![CSV Output Example](imgs/csvoutput.png) -->
 
-![](checkSpaceContaminations/assets/images/csvoutput.png)
+![](/checkSpaceContaminations/assets/images/csvoutput.png)
 
 #### Configuration Setup
 
@@ -214,15 +214,15 @@ There are 3 verbosity modes.
 
 The first is the least verbose, it is the default (with no flags). It prints the number of species above the threshold value. It lists the contaminants (species with scores above the threshold).
 
-![](checkSpaceContaminations/assets/images/terminaloutput.png)
+![](/checkSpaceContaminations/assets/images/terminaloutput.png)
 
 The second is with ```-v``` as flag. It prints Species name (score; number of positive location). It also outputs a summary table with scores, number of species of that score, and the number of locations over which they are spread. Verbosity ```-v``` outputs also provide the number of species that were not found in the curated species in the datfile as well as the total number of locations processed.
 
-![](checkSpaceContaminations/assets/images/outv.png)
+![](/checkSpaceContaminations/assets/images/outv.png)
 
 The verbosity ```-vv``` output is mostly the same as the verbosity ```-v``` output. Except that the names of the species their scores and # of locations are tabulated. There is also a column where the location names are listed.
 
-![](checkSpaceContaminations/assets/images/outvv.png)
+![](/checkSpaceContaminations/assets/images/outvv.png)
 
 ##### -pdf
 
@@ -230,31 +230,31 @@ By including this flag, a pdf with 3 charts is generated. Also, a pdf with relev
 
 The pdf looks as follows:
 
-![](checkSpaceContaminations/assets/images/outpdf.png)
+![](/checkSpaceContaminations/assets/images/outpdf.png)
 
 The venn diagrams file looks like this:
 
-![](checkSpaceContaminations/assets/images/outvenn.png)
+![](/checkSpaceContaminations/assets/images/outvenn.png)
 
 The second chart of the pdf may switch to a log scale y-axis when reasonable. For example:
 
 _Linear Scale Chart Example:_
 
-![](checkSpaceContaminations/assets/images/outlin2.png)
+![](/checkSpaceContaminations/assets/images/outlin2.png)
 
 _Log Scale Chart Example:_
 
-![](checkSpaceContaminations/assets/images/outlog2.png)
+![](/checkSpaceContaminations/assets/images/outlog2.png)
 
 The scale of the x-axis of the third chart is controlled by the ```-logchart``` flag. If the flag is included, the chart may have a log scale x-axis if the ratio of the biggest bar to the smallest bar is greater than 100. The two diagrams look as follows:
 
 _Linear Scale Chart Example:_
 
-![](checkSpaceContaminations/assets/images/outlin.png)
+![](/checkSpaceContaminations/assets/images/outlin.png)
 
 _Log Scale Chart Example:_
 
-![](checkSpaceContaminations/assets/images/outlog.png)
+![](/checkSpaceContaminations/assets/images/outlog.png)
 
 ### II By Importing as a Module
 
