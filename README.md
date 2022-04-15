@@ -104,7 +104,7 @@ to view the help menu with a complete list of options.
 
 This is the menu that you should see:
 
-![Help Menu Image](src/imgs/help_menu.png)
+![Help Menu Image](docs/assets/images/help_menu.png)
 
 There are 3 categories of arguments:
 
@@ -292,7 +292,7 @@ Dr. Nitin Singh - [nitin.k.singh@jpl.nasa.gov](mailto:nitin.k.singh@jpl.nasa.gov
 
 Nishka Arora - [naarora@caltech.edu](mailto:naarora@caltech.edu)
 
-Dr. Moogega Cooper - [moogega.cooper@jpl.nasa.gov]
+Dr. Moogega Cooper - [moogega.cooper@jpl.nasa.gov](mailto:moogega.cooper@jpl.nasa.gov)
 
 Pypi Link:
 

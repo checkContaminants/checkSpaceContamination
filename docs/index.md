@@ -104,7 +104,7 @@ to view the help menu with a complete list of options.
 
 This is the menu that you should see:
 
-![Help Menu Image](../src/imgs/help_menu.png)
+![Help Menu Image](/checkSpaceContamination/assets/images/help_menu.png)
 
 There are 3 categories of arguments:
 
@@ -127,7 +127,7 @@ _Details of the input file:_
 - If the location names are unavailable (columns are not named in the csv/tsv), then we name the columns with loc1, loc2, etc. for the output and the charts. If location names are unavailable, use the flag '-noheader'
 
 Example csv:  
-<img src="../src/imgs/examplecsv.png" width=50% height=50%>
+<img src="/checkSpaceContamination/assets/images/examplecsv.png" width=50% height=50%>
 
 ##### -outfile
 
@@ -292,7 +292,7 @@ Dr. Nitin Singh - [nitin.k.singh@jpl.nasa.gov](mailto:nitin.k.singh@jpl.nasa.gov
 
 Nishka Arora - [naarora@caltech.edu](mailto:naarora@caltech.edu)
 
-Dr. Moogega Cooper - [moogega.cooper@jpl.nasa.gov]
+Dr. Moogega Cooper - [moogega.cooper@jpl.nasa.gov](mailto:moogega.cooper@jpl.nasa.gov)
 
 Pypi Link:
 
