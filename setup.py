@@ -25,7 +25,7 @@ setuptools.setup(
     include_package_data=True,
     package_data={'':['data/*.csv', 'data/*.txt', 'test/data/*.csv', 'test/data/gentests/*.csv']},
     python_requires=">=3.6",
-    install_requires=['pandas==1.3.4', 'numpy==1.21.2', 'tabulate==0.8.9', 'matplotlib==3.4.3', 
+    install_requires=['pandas==1.3.4', 'numpy==1.22', 'tabulate==0.8.9', 'matplotlib==3.4.3', 
                         'matplotlib-venn==0.11.6'],
     entry_points = {
         'console_scripts': ['checkContaminants=checkContaminants.checkContaminants:main']
