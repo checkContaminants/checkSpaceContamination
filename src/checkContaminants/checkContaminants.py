@@ -628,8 +628,8 @@ class location_contamination(object):
             verticalalignment='top',
             transform=ax.transAxes)
 
-# def main():
-if __name__ == '__main__':
+def main():
+#if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     input_setup = parser.add_argument_group('basic usage', '')
