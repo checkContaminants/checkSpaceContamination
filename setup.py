@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="checkContaminants",
-    version="0.99.3",
+    version="0.99.4",
     author="Nishka Arora, Dr. Ashish Mahabal, Dr. Nitin Singh, Dr. Moogega Cooper",
     author_email="naarora@caltech.edu, aam@astro.caltech.edu, nitin.k.singh@jpl.nasa.gov, moogega.cooper@jpl.nasa.gov",
     description="Command Line Package that can be used to analyse locations datasets",
