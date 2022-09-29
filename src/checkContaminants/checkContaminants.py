@@ -27,7 +27,6 @@ class location_contamination(object):
     """
     factors = {} # score weights
     curated_species = pd.DataFrame() # curated species with scores
-    local_threshold = 2000
 
     def __init__(self, **kw):
         if 'config' not in kw:
@@ -46,7 +45,9 @@ class location_contamination(object):
             self.factors = json.loads(data)
         
         if 'local_threshold' not in kw.keys():
-            kw['local_threshold'] = 2000
+            self.local_threshold = 2000
+        else:
+            self.local_threshold = kw['local_threshold']
 
         if kw['curated'] == 'curated_species.csv':
             data = pkgutil.get_data(__name__, 'data/curated_species.csv')
@@ -56,7 +57,6 @@ class location_contamination(object):
             self.curated_species = pd.read_csv(kw['curated'], index_col=0) # Do I assume the first column has indices
 
         self.curated_species = self.curated_species.reset_index(drop=True)
-        self.local_threshold = kw['local_threshold']
 
     def get_score(self, **kw):
         """
@@ -369,7 +369,7 @@ class location_contamination(object):
         ax2 = fig.add_subplot(spec[0:4, 4:8])
         ax3 = fig.add_subplot(spec[6:11, ::])
 
-        loc = location_contamination(curated=kw['curated'], config=kw['config'], local=kw['local'])
+        loc = location_contamination(curated=kw['curated'], config=kw['config'], local_threshold=kw['local_threshold'])
 
         loc.bar_species_for_each_score(ax1, result)
         loc.bar_locs_for_top10_species(ax2, result)
@@ -628,8 +628,8 @@ class location_contamination(object):
             verticalalignment='top',
             transform=ax.transAxes)
 
-def main():
-# if __name__ == '__main__':
+# def main():
+if __name__ == '__main__':
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     input_setup = parser.add_argument_group('basic usage', '')
@@ -641,7 +641,7 @@ def main():
     configs = parser.add_argument_group('configuration setup', '')
 
     configs.add_argument('-s', '-sort', type=str, help='Sort by S (score), L (positive locations), A (alphabetic) or a combination eg. SLA, SA, SL, LS. \n For no sort use I (input order)', default='SLA')
-    configs.add_argument('-local', type=int, help='Local threshold for location reads', default=2000)
+    configs.add_argument('-local_threshold', type=int, help='Local threshold for location reads', default=2000)
     configs.add_argument('-t', type=float, help='Score threshold for positive contaminants.', default=1.0)
     configs.add_argument('-datfile', type=str, default='curated_species.csv (provided)', help='Curated species with scores')
     configs.add_argument('-config', type=str, default='score_weights.txt', help='Score weight for each trait\'s contamination')
@@ -670,10 +670,10 @@ def main():
             args.datfile = args.datfile[:args.datfile.index(' (provided)')]
         if '(provided)' in args.config:
             args.config = args.config[:args.config.index(' (provided)')]
-        loc = location_contamination(curated=args.datfile, config=args.config, local=args.local)
+        loc = location_contamination(curated=args.datfile, config=args.config, local_threshold=args.local_threshold)
         
         loc.get_score(file=args.infile, t=args.t, v=args.v,
                       vv=args.vv, pdf=args.pdf, outfile=args.outfile,
                       sort_species=args.s.lower(), csv_header= not args.noheader,
-                      local_threshold=args.local, logchart=args.logchart, curated=args.datfile,
-                      config=args.config, local=args.local)
+                      local_threshold=args.local_threshold, logchart=args.logchart, curated=args.datfile,
+                      config=args.config)
